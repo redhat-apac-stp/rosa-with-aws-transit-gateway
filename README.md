@@ -15,7 +15,7 @@ Setup the environment by following these steps:
 6. Install the latest AWS CDK (e.g., sudo npm install -g aws-cdk)
 7. Install the latest ROSA CLI from https://github.com/openshift/rosa/
 8. Install the latest OC CLI from https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/
-9. Create a SSH key pair in the AWS console which will be used later for connecting to the bastion host and store this key securely on your local machine. Also define a custom environment variable to point to the name of the key (e.g., bastion-rsa-key)
+9. Create a SSH key pair in the AWS console which will be used later for connecting to the bastion host and store this key securely (chmod 400) on your local machine. Also define a custom environment variable to point to the name of the key (e.g., bastion-rsa-key)
 
 	BASTION_KEY=bastion-rsa-key
 
@@ -27,7 +27,11 @@ Setup the environment by following these steps:
 11. Either use npm run build for a one-time build or npm run watch (from a separate window) for continous builds
 12. Perform a dry-run of the stack deployment (e.g., cdk synth) and fix any errors
 13. Deploy the stack (e.g., cdk deploy) and review what was created in the AWS console under EC2 Global View
-14. 
+14. Confirm login to the bastion host (it will take a little while to launch)
+
+	ssh -i "/path/to/bastion-rsa-key.pem" ec2-user@ip-address-of-ec2-instance
+
+15. Logout and install a multi-AZ ROSA STS cluster using the CIDR block for the ROSA VPC and subnets which can be gleaned from EC2 Global View
 
  
 
