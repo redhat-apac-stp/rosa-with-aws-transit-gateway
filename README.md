@@ -38,10 +38,15 @@ Setup the environment by following these steps:
 	
 	rosa create cluster --sts
 	
-	rosa create operator-roles --cluster foobar --mode auto -y
+	rosa create operator-roles -c foobar --mode auto -y
 	
-	rosa create oidc-provider --cluster foobar --mode auto -y
+	rosa create oidc-provider -c foobar --mode auto -y
 	
+16. After the cluster is ready (rosa describe cluster -c foobar) create an administrative account and wait for a few minutes for it to become ready
+
+	rosa create admin -c foobar
+	
+17. Setup SSH tunneling to enable access to both the API endpoint and OpenShift web console
 	
 
 
