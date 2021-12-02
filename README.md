@@ -42,7 +42,7 @@ Setup the environment by following these steps:
 	
 	CDK_DEFAULT_REGION=XXXXXXXXXXXX
 
-11. Either build, dry-run and deploy the stack
+11. Build, dry-run and deploy the stack
 
 	npm run build
 	
