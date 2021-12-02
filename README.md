@@ -51,7 +51,9 @@ Setup the environment by following these steps:
 	vi /etc/hosts
 	
 	127.0.0.1   api.foobar.c63c.p1.openshiftapps.com
+
 	127.0.0.1   console-openshift-console.apps.foobar.c63c.p1.openshiftapps.com
+	
 	127.0.0.1   oauth-openshift.apps.foobar.c63c.p1.openshiftapps.com
 
 
