@@ -19,7 +19,7 @@ Setup the environment by following these steps:
 
 	BASTION_KEY=bastion-rsa-key
 
-10. Define the following two CDK environment variables
+10. Define the following CDK environment variables
 
 	CDK_DEFAULT_ACCOUNT=ap-southeast-1
 	
@@ -32,7 +32,7 @@ Setup the environment by following these steps:
 
 	ssh -i "/path/to/bastion-rsa-key.pem" ec2-user@ip-address-of-ec2-instance
 
-15. Logout and install a multi-AZ ROSA STS cluster using the CIDR block for the ROSA VPC and subnets which can be gleaned from EC2 Global View
+15. Logout and install a multi-AZ ROSA STS cluster using the CIDR block for the ROSA VPC and subnets as reported in the EC2 Global View
 
  
 
