@@ -7,7 +7,7 @@ Most of the installation of this architecture will be driven via the AWS CDK fol
 
 Setup the environment by following these steps:
 
-1. Clone this repository to your local machine and change to the target directory
+1. Clone this repository to your local machine and change directory
 2. Install a recent version of nodejs (e.g., v14.18 was used)
 3. Update npm (e.g., sudo npm install -g npm) and install dependencies (e.g., npm install)
 4. Install the latest AWS CLI as per https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html 
