@@ -47,7 +47,13 @@ Setup the environment by following these steps:
 	rosa create admin -c foobar
 	
 17. Setup SSH tunneling to enable access to both the API endpoint and OpenShift web console
+
+	vi /etc/hosts
 	
+	127.0.0.1   api.foobar.c63c.p1.openshiftapps.com
+	127.0.0.1   console-openshift-console.apps.foobar.c63c.p1.openshiftapps.com
+	127.0.0.1   oauth-openshift.apps.foobar.c63c.p1.openshiftapps.com
+
 
 
 
