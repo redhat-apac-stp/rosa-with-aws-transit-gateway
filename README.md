@@ -38,9 +38,9 @@ Setup the environment by following these steps:
 
 10. Define the following CDK environment variables
 
-	CDK_DEFAULT_ACCOUNT=ap-southeast-1
+	CDK_DEFAULT_ACCOUNT=XXXXXXXXXXXX
 	
-	CDK_DEFAULT_REGION=XXXXXXXXXXXX
+	CDK_DEFAULT_REGION=ap-southeast-1
 
 11. Build, dry-run and deploy the stack
 
