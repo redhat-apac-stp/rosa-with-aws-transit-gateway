@@ -35,9 +35,13 @@ Setup the environment by following these steps:
 15. Logout and install a multi-AZ ROSA STS cluster with Private Link enabled using the ROSA VPC CIDR block and subnets as reported in the EC2 Global View. 
 
 	rosa create account-roles -y
+	
 	rosa create cluster --sts
+	
 	rosa create operator-roles --cluster foobar --mode auto -y
+	
 	rosa create oidc-provider --cluster foobar --mode auto -y
+	
 	
 
 
