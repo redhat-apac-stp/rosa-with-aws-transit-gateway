@@ -22,6 +22,7 @@ Setup the environment by following these steps:
 10. Define the following two CDK environment variables
 
 	CDK_DEFAULT_ACCOUNT=ap-southeast-1
+	
 	CDK_DEFAULT_REGION=XXXXXXXXXXXX
 
 11. Either use npm run build for a one-time build or npm run watch (from a separate window) for continous builds
