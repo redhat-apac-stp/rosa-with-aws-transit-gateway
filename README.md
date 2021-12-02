@@ -2,6 +2,7 @@
 
 This article describes how to implement a ROSA STS cluster with Private Link enabled and leverage a centralised Egress VPC (for routing to the Internet) and Bastion VPC (for remote administration). The architecture of the solution is depicted in the following diagram.
 
+https://github.com/redhat-apac-stp/rosa-with-aws-transit-gateway/blob/main/ROSA%20-%20AWS%20Transit%20Gateway.png
 
 Most of the installation of this architecture will be driven via the AWS CDK followed by the ROSA CLI to install the cluster. AWS CDK generates CloudFormation templates based on a set of AWS resources defined using the TypeScript programming language. These templates are then deployed or destroyed as a single unit (referred to as a stack) and can also be updated based on a delta. 
 
