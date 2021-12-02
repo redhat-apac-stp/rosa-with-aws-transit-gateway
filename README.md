@@ -50,7 +50,7 @@ Setup the environment by following these steps:
 	
 18. Setup SSH tunneling to enable access to both the API endpoint and OpenShift web console
 
-	vi /etc/hosts
+	sudo vi /etc/hosts
 	
 	127.0.0.1   api.foobar.c63c.p1.openshiftapps.com
 
@@ -58,15 +58,13 @@ Setup the environment by following these steps:
 	
 	127.0.0.1   oauth-openshift.apps.foobar.c63c.p1.openshiftapps.com
 
-19. Connect to the bastion host
-
 	sudo ssh -i "bastion-rsa-key.pem" ec2-user@ec2-13-212-240-215.ap-southeast-1.compute.amazonaws.com -L 6443:api.foobar.c63c.p1.openshiftapps.com:6443 -L 443:console-openshift-console.apps.foobar.c63c.p1.openshiftapps.com:443
 	
-20. Connect to API endpoint from another window
+19. Connect to API endpoint from another window
 
 	oc login https://api.foobar.c63c.p1.openshiftapps.com:6443 --username cluster-admin --password fkBAq-hPXIN-7EshB-9nLGP
 
-21. Connect to the OpenShift web console from a browser
+20. Connect to the OpenShift web console from a browser
 
 	xdg-open https://console-openshift-console.apps.foobar.c63c.p1.openshiftapps.com
 	sudo ssh 
