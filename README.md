@@ -32,7 +32,16 @@ Setup the environment by following these steps:
 
 	ssh -i "/path/to/bastion-rsa-key.pem" ec2-user@ip-address-of-ec2-instance
 
-15. Logout and install a multi-AZ ROSA STS cluster using the CIDR block for the ROSA VPC and subnets as reported in the EC2 Global View
+15. Logout and install a multi-AZ ROSA STS cluster with Private Link enabled using the ROSA VPC CIDR block and subnets as reported in the EC2 Global View. 
+
+	rosa create account-roles --mode auto -y
+	rosa create cluster --sts
+	rosa create operator-roles --cluster foobar --mode auto -y
+	rosa create oidc-provider --cluster foobar --mode auto -y
+	
+
+
+
 
  
 
