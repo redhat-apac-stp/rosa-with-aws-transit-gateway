@@ -62,22 +62,25 @@ rosa create admin -c foobar
 127.0.0.1   oauth-openshift.apps.foobar.xxxx.p1.openshiftapps.com
 ```
 
-8. Setup a tunnel to the bastion host to redirect API and console access
+8. Edit the private hosted zone created by the ROSA installer and associate it with the bastion VPC
+
+
+9. Setup a tunnel to the bastion host to redirect API and console access
 
 ```
 sudo ssh -i /path/to/bastion-rsa-key.pem ec2-user@ec2-54-251-74-193.ap-southeast-1.compute.amazonaws.com -L 6443:api.foobar.w616.p1.openshiftapps.com:6443 -L 443:console-openshift-console.apps.foobar.w616.p1.openshiftapps.com:443
 ```
 
-9. From another terminal window connect to the API server from your local machine (not the bastion) via the tunnel.
+10. From another terminal window connect to the API server from your local machine (not the bastion) via the tunnel.
 
 	oc login https://api.foobar.c63c.p1.openshiftapps.com:6443 --username cluster-admin --password XXXXX-XXXXX-XXXXX-XXXXX
 
-10. Similarly, open the OpenShift web console via a browser from your local machine.
+11. Similarly, open the OpenShift web console via a browser from your local machine.
 
 	xdg-open https://console-openshift-console.apps.foobar.c63c.p1.openshiftapps.com
 
 
-11. Teardown the cluster and purge all resources
+12. Teardown the cluster and purge all resources
 
 ```
 rosa delete cluster -c foobar -y
